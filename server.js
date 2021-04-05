@@ -9,8 +9,7 @@ const app = express();
 //import modules
 const bodyParser = require("body-parser");
 const router = require('./routes/main.routes.js');
-const secure = require('ssl-express-www');
-app.use(secure);
+
 //
 app.use(bodyParser.json(), bodyParser.urlencoded({ extended: true }));
 app.use('/', router);

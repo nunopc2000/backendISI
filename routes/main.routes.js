@@ -5,5 +5,9 @@ router.get('/', function (req, res) {
 });
 
 router.get('/users', userController.getUsers );
+router.get('/userByID', userController.getUserByID);
 
+router.post('/addUser', userController.addUser);
+
+router.delete('/deleteUser/:id', userController.deleteUser);
 module.exports = router;
