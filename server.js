@@ -1,5 +1,5 @@
 const host = process.env.HOST || "127.0.0.1";
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5050;
 
 
 const express = require('express');
@@ -9,6 +9,8 @@ const app = express();
 //import modules
 const bodyParser = require("body-parser");
 const router = require('./routes/main.routes.js');
+const secure = require('ssl-express-www');
+app.use(secure);
 //
 app.use(bodyParser.json(), bodyParser.urlencoded({ extended: true }));
 app.use('/', router);
