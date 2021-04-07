@@ -5,7 +5,7 @@ router.get('/', function (req, res) {
 });
 
 router.get('/users', userController.getUsers );
-router.get('/userByID', userController.getUserByID);
+router.get('/userByID/:id', userController.getUserByID);
 
 router.post('/addUser', userController.addUser);
 
