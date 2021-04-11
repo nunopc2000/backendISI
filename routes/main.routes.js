@@ -11,3 +11,7 @@ router.post('/addUser', userController.addUser);
 
 router.delete('/deleteUser/:id', userController.deleteUser);
 module.exports = router;
+
+
+
+// Comentário para o teste das branchs
