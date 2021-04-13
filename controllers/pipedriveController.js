@@ -44,7 +44,30 @@ function getUserByID(req, res) {
     }
   });
 }
+/*
+function getByTerm(req, res) {
+  let options = {
+    //const id =
+    method: "GET",
+    url:
+      "https://api.pipedrive.com/v1/persons/search/?term=" + req.params.term + "&fields=name&start=0&api_token=f26477cf727d281337bbf5f20f062f44d504a6a5",
+  };
 
+  request(options, async (error, response, body) => {
+    console.log(req.params.id);
+    if (error) {
+      res.status(400).send({
+        message: "Error",
+        error: error,
+      });
+    } else {
+      const json = JSON.parse(body);
+      //console.log(bcrypt.compareSync("nuno", json.data[atributes.password]))
+      res.send(json);
+    }
+  });
+}
+*/
 //POSTS
 function addUser(req, res) {
   let user = {};
@@ -234,6 +257,7 @@ function deleteUser(req, res) {
 
 module.exports = {
   getUsers: getUsers,
+  getByTerm:getByTerm,
   getUserByID: getUserByID,
   addUser: addUser,
   addMaterialManager: addMaterialManager,
