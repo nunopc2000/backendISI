@@ -179,12 +179,16 @@ function updateData(req, res) {
   //comparar password
   //bcrypt.compareSync(passwordInserida, passwordPipedrive)
   console.log(user);
-
+  console.log(req.params.id)
   let options = {
     method: "PUT",
     url:
-      "https://api.pipedrive.com/v1/persons" + req.params.id + "?api_token=f26477cf727d281337bbf5f20f062f44d504a6a5",
+      "https://api.pipedrive.com/v1/persons/" + req.params.id + "?api_token=f26477cf727d281337bbf5f20f062f44d504a6a5",
     form: user,
+    headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+  }
   };
 
   request.put(options, async (error, response, body) => {
@@ -194,7 +198,8 @@ function updateData(req, res) {
         error: error,
       });
     } else {
-      if (response.statusCode == 201) {
+      console.log(body)
+      if (response.statusCode == 200) {
         res.send("success");
       } else {
         res.send("Error");
