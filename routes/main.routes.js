@@ -1,13 +1,15 @@
 const router = require('express').Router();
 const userController = require('../controllers/pipedriveController.js');
 const moloniController = require('../controllers/moloniController.js');
+
 router.get('/', function (req, res) {
     res.send("Pagina inicial")
 });
+
 //Pipedrive
 router.get('/users', userController.getUsers );
 router.get('/userByID/:id', userController.getUserByID);
-
+//router.get('/userTerm', userController.getByTerm);
 router.post('/addUser', userController.addUser);
 router.post('/addMaterialManager', userController.addMaterialManager);
 router.post('/addTicketManager', userController.addTicketManager);

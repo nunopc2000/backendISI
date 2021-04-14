@@ -79,6 +79,7 @@ const password = bcrypt.hashSync(
   user["name"] = req.body.name;
   user["email"] = req.body.email;
   user["phone"] = req.body.phone;
+  user[atributes.nif] = req.body.nif;
   user[atributes.password] = password;
   user[atributes.cargo] = "Cliente";
   //comparar password
@@ -257,7 +258,7 @@ function deleteUser(req, res) {
 
 module.exports = {
   getUsers: getUsers,
-  getByTerm:getByTerm,
+  //getByTerm:getByTerm,
   getUserByID: getUserByID,
   addUser: addUser,
   addMaterialManager: addMaterialManager,
