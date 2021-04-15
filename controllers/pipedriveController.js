@@ -3,6 +3,7 @@ const atributes = require("./pipeAtributes.json")
 const bcrypt = require('bcrypt');
 //dartbranch
 //GETS
+
 function getUsers(req, res) {
   let options = {
     method: "GET",
