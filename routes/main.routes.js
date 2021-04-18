@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const userController = require('../controllers/pipedriveController.js');
 const moloniController = require('../controllers/moloniController.js');
+const jasminController = require('../controllers/jasminController.js');
 
 router.get('/', function (req, res) {
     res.send("Pagina inicial")
@@ -22,5 +23,8 @@ module.exports = router;
 //Moloni
 router.get('/bills', moloniController.getAllBills);
 router.get('/billsByID', moloniController.getBillsByID);
+
+//Jasmin   
+router.get('/teste', jasminController.teste);
 
 // Comentário para o teste das branchs
