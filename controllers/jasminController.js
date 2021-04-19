@@ -47,8 +47,37 @@ function getMaterials(req, res) {
   });
 }
 
+function addMaterial(req, res) {
+    login(function (token) {
+      if (token) {
+        let material = {};
+        material["name"] = req.body.itemKey;
+        material["armazem"] = req.body.defaultWarehouse;
+        material["tipo"] = req.body.itemType;
+        console.log(material);
+          
+          let options = {
+              method: 'POST',
+              url: "https://my.jasminsoftware.com/api/252175/252175-0001/materialscore/materialsitems/",
+              form: material,
+              headers: {
+                  'Authorization': `Bearer ${token}`,
+                  'Content-Type': 'application/json'
+              }
+          }
+          request(options, function (error, response, body) {
+              console.log(response.statusCode)
+              res.send(JSON.parse(body));
+          })
+      } else {
+        res.send("erro");
+      }
+    });
+  }
+
 
 
 module.exports = {
     getMaterials: getMaterials,
+    addMaterial: addMaterial,
 };
