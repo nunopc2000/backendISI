@@ -26,7 +26,7 @@ function login(cb) {
   );
 }
 
-function teste(req, res) {
+function getMaterials(req, res) {
   login(function (token) {
     if (token) {
         let options = {
@@ -50,5 +50,5 @@ function teste(req, res) {
 
 
 module.exports = {
-  teste: teste,
+    getMaterials: getMaterials,
 };

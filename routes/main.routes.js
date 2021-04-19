@@ -25,6 +25,6 @@ router.get('/bills', moloniController.getAllBills);
 router.get('/billsByID', moloniController.getBillsByID);
 
 //Jasmin   
-router.get('/teste', jasminController.teste);
+router.get('/getMaterials', jasminController.getMaterials);
 
 // Comentário para o teste das branchs
