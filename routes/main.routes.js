@@ -9,7 +9,7 @@ const pipedriveController = require('../controllers/pipedriveController.js');
 const invoiceController = require('../controllers/invoiceController.js');
 router.get('/', function (req, res) {
     console.log(__dirname)
-    res.redirect("../EasyFestivalTudo/easy_festivalMaisRecente/Frontoffice/index.html");
+    res.send("Página Inicial");
 });
 
 //Pipedrive
