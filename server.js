@@ -1,11 +1,12 @@
 const host = process.env.HOST || "127.0.0.1";
 const port = process.env.PORT || 5050;
 
-
 const express = require('express');
-
+const cors = require('cors');
 
 const app = express();
+
+app.use(cors())
 //import modules
 const bodyParser = require("body-parser");
 const router = require('./routes/main.routes.js');
@@ -24,3 +25,4 @@ app.listen(port, function (err) {
 })
 
 module.exports = app;
+
