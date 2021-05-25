@@ -2,6 +2,8 @@
 <html class="no-js" lang="zxx">
 
 <head>
+    <link rel="manifest" href="webmanifest.json">
+    <link rel="canonical" href="https://backend-easyfestival.herokuapp.com/">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Easy Festival</title>
@@ -11,7 +13,7 @@
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <link rel="shortcut icon" type="image/x-icon" href="img/LogoPequeno2.png">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="manifest" href="webmanifest.json">
+    
     <!-- CSS here -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -73,6 +75,18 @@
 </head>
 
 <body>
+    <script>
+        if ('serviceWorker' in navigator){
+
+            navigator.serviceWorker.register('sw.js')
+            .then(function () {
+                console.log('service worker registered');
+            })
+            .catch(function () {
+                console.warn('service worker failed');
+            });
+        }
+    </script>
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
