@@ -39,11 +39,11 @@ window.onload = () => {
             if (cargo == "Cliente") {
                 window.location.href = "index_cliente.html";
             } else if (cargo == "Gestor de Bilhetes") {
-                window.location.replace("../Backoffice/bilhetes.html")
+                window.location.replace("bilhetes.html")
             } else if (cargo == "Gestor de Materiais") {
-                window.location.replace("../Backoffice/materiais.html")
+                window.location.replace("materiais.html")
             } else if (cargo == "Admin") {
-                window.location.replace("../Backoffice/estatisticas.html")
+                window.location.replace("estatisticas.html")
             }
         } else {
             swal({ type: 'error', title: 'Login inválido', text: 'Dados incorretos' })
