@@ -1,0 +1,407 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Easy Festival</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/LogoPequeno2.png">
+
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="font/flaticon.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="css/flaticon.css">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8RU7HF7lWAJMcha9rNXd0HsrUhz6MAoY"
+        type="text/javascript">
+        </script>
+
+    <style type="text/css">
+        #map1 {
+            width: auto;
+            height: 400px;
+        
+
+
+        }
+        #map2 {
+            width: auto;
+            height: 400px;
+
+
+        }
+        #map3 {
+            width: auto;
+            height: 400px;
+
+
+        }
+        #map4 {
+            width: auto;
+            height: 400px;
+
+
+        }
+        #map5 {
+            width: auto;
+            height: 400px;
+
+
+        }#map6 {
+            width: auto;
+            height: 400px;
+
+
+        }
+        #toggle {
+		display: block;
+	}
+
+    </style>
+
+
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index_cliente.html">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-7">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="index_cliente.html">Cartaz</a></li>
+                                        <li><a href="comprar_bilhetes.html">Comprar bilhete</a></li>
+                                        <li><a href="alugar_material.html">Alugar material</a></li>
+                                        <li><a class="active" href="cliente_estabelecimentos.html">Estabelecimentos</a>
+                                         <li><a class="hidden-md" href="perfil.html">Perfil</a>  
+                                        <li><a class="hidden-md" href="index.html" style="background-color:#9200004d">Terminar</a>       
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <a href="perfil.html">
+                                <button type="submit" style="margin: 0 15px;" class="boxed_btn_orange">Perfil</button>
+                            </a>
+                            <a href="index.html">
+                                <button type="button" class="boxed_btn_orange2">Terminar</button>
+                            </a>
+                        </div>
+                        
+
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- bradcam_area_start -->
+    <div class="bradcam_area breadcam_bg overlay2">
+
+    </div>
+    <!-- bradcam_area_end -->
+
+    <!-- our_courses_start -->
+    <div class="our_courses">
+        <div class="container">
+            <div class="row center">
+                <div class="col-xl-12">
+
+                    <h2>Seleciona o estabelecimento que desejas encontrar</h2>
+                    <br>
+                    <p>Terás ao teu dispôr um mapa com a localização do estabelecimento, bem como a tua distância até
+                        esse estabelecimento.
+                    </p>
+                    <br>
+                    <br>
+
+                </div>
+            </div>
+            <div class="row">
+                <div id="wc" class="col-xl-4 col-md-4 col-lg-0">
+                    <div class="single_course text-center">
+                        <div class="icon">
+                            <a href="#f" class="login popup-with-form">
+                                <img src="img/estabelecimentos/wc.png" alt="">
+                        </div></a>
+                        <br>
+                        <h3>WC</h3>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 col-lg-0">
+                    <div class="single_course text-center">
+                        <div class="icon">
+                            <a href="#e" class="login popup-with-form">
+                                <img src="img/estabelecimentos/aluguer.png" alt="">
+                        </div></a>
+                        <br>
+                        <h3>Aluguer de material</h3>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 col-lg-0">
+                    <div class="single_course text-center">
+                        <div class="icon">
+                            <a href="#d" class="login popup-with-form">
+                                <img src="img/estabelecimentos/palcop.png" alt="">
+
+                        </div></a>
+                        <br>
+                        <h3>Palco Principal</h3>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 col-lg-0">
+                    <div class="single_course text-center">
+                        <div class="icon">
+                            <a href="#c" class="login popup-with-form">
+                                <img src="img/estabelecimentos/palcos.png" alt="">
+
+                        </div></a>
+                        <br>
+                        <h3>Palco Secundário</h3>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 col-lg-0">
+                    <div class="single_course text-center">
+                        <div class="icon">
+                            <a href="#b" class="login popup-with-form">
+                                <img src="img/estabelecimentos/restauraçao.png" alt="">
+
+                        </div></a>
+                        <br>
+                        <h3>Restauração</h3>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 col-lg-0">
+                    <div class="single_course text-center">
+                        <a href="#a" class="login popup-with-form">
+                            <div class="icon">
+                                <!-- <i class="flaticon-tent"></i> -->
+                                <img src="img/estabelecimentos/banca.png" alt="">
+                            </div>
+                        </a>
+                        <br>
+                        <h3>Bancas para lavar loiça</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- our_courses_end -->
+
+    <div id="a" style="display: flex; flex-direction: row; justify-content: center; align-items: center"
+        class="white-popup-block mfp-hide">
+        <div class="popup_box ">
+            <div class="popup_inner">
+
+                <h3 class="text-center">Localização</h3>
+                <div id="map1" class="mx-auto center"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="b" style="display: flex; flex-direction: row; justify-content: center; align-items: center"
+        class="white-popup-block mfp-hide">
+        <div class="popup_box ">
+            <div class="popup_inner">
+
+                <h3 class="text-center">Localização</h3>
+                <div id="map2" class="mx-auto center"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="c" style="display: flex; flex-direction: row; justify-content: center; align-items: center"
+        class="white-popup-block mfp-hide">
+        <div class="popup_box ">
+            <div class="popup_inner">
+
+                <h3 class="text-center">Localização</h3>
+                <div id="map3" class="mx-auto center"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="d" style="display: flex; flex-direction: row; justify-content: center; align-items: center"
+        class="white-popup-block mfp-hide">
+        <div class="popup_box ">
+            <div class="popup_inner">
+
+                <h3 class="text-center">Localização</h3>
+                <div id="map4" class="mx-auto center"></div>
+
+            </div>
+        </div>
+    </div>
+    <div id="e" style="display: flex; flex-direction: row; justify-content: center; align-items: center"
+        class="white-popup-block mfp-hide">
+        <div class="popup_box ">
+            <div class="popup_inner">
+
+                <h3 class="text-center">Localização</h3>
+                <div id="map5" class="mx-auto center"></div>
+
+            </div>
+        </div>
+    </div>
+    <div id="f" style="display: flex; flex-direction: row; justify-content: center; align-items: center"
+        class="white-popup-block mfp-hide">
+        <div class="popup_box ">
+            <div class="popup_inner">
+
+                <h3 class="text-center">Localização</h3>
+                <div id="map6" class="mx-auto center"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer footer_bg_1">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+
+                                            <img src="img/face.PNG" alt="">
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="img/insta.PNG" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="img/youtube.PNG" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Contactos
+                            </h3>
+                            <p>
+                                +351 961 685 291 <br>
+                                geral.easyfestival@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy; Your Website 2021</script>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script>
+        function myMap() {
+            var mapProp = {
+                center: new google.maps.LatLng(41.919108, -8.566793),
+                zoom: 18,
+            };
+            var map = new google.maps.Map(document.getElementById("test-form"), mapProp);
+        }
+    </script>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXDgdZwVNYvT3hT8nm3leON5SGfNBmW8&callback=myMap"></script>
+    <script src="cliente_estabelecimentos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

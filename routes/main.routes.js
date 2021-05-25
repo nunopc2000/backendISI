@@ -7,10 +7,10 @@ const openWeather = require('../controllers/openWeather.js')
 
 const pipedriveController = require('../controllers/pipedriveController.js');
 const invoiceController = require('../controllers/invoiceController.js');
-router.get('/', function (req, res) {
+/*router.get('/', function (req, res) {
     console.log(__dirname)
     res.send("Página Inicial");
-});
+});*/
 
 //Pipedrive
 router.get('/users', userController.getUsers );

@@ -1,0 +1,405 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Easy Festival</title>
+    <meta name="description" content="Easy Festival">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
+    <link rel="shortcut icon" href="images/logocima.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
+
+    <style>
+        .btn-success {
+            color: #fff;
+            background-color: #9EC1C1 !important;
+            border-color: #9EC1C1 !important;
+        }
+
+
+        .left-panel {
+            background: #920000 !important;
+            padding-top: 2% !important;
+        }
+
+        .navbar .main-menu {
+            padding: 0;
+            background-color: #920000 !important;
+        }
+
+        .navbar-brand {
+
+            padding-top: .0rem !important;
+            padding-bottom: .0rem !important;
+        }
+
+
+        .navbar .navbar-nav li>a {
+            background: none !important;
+            color: #607d8b;
+            display: inline-flex !important;
+            font-size: 14px;
+        }
+
+        .table {
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Left Panel -->
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+
+                    <li>
+                        <a href="materiais.html" style="color:white"> <i class="menu-icon ti-home"
+                                style="color:white"></i>Gestão de Materiais </a>
+                    </li>
+                    <li>
+                        <a href="adicionarmaterial.html" style="color:white"> <i class="menu-icon ti-plus"
+                                style="color:white"></i>Adicionar Materiais </a>
+                    </li>
+                    <li>
+                        <a href="entregamateriais_confirmado.html" style="color:white"> <i class="menu-icon ti-truck"
+                                style="color:white"></i>Entregas</a>
+                    </li>
+                    <li>
+                        <a href="devolucoes.html" style="color:white"> <i class="menu-icon ti-loop"
+                                style="color:white"></i>Devoluções </a>
+                    </li>
+
+
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside>
+
+    <!-- /#left-panel -->
+    <!-- Right Panel -->
+    <div id="right-panel" class="right-panel">
+        <!-- Header-->
+        <header id="header" class="header">
+            <div class="top-left">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="materiais.html"><img src="images/logo.png" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="materiais.html"><img src="images/logo2.png" alt="Logo"></a>
+                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="header-menu">
+
+
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/perfil_logo1.png" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="perfil_2.html"><i class="fa fa-user"></i>Meu Perfil</a>
+
+                            <a class="nav-link" href="../Frontoffice/index.html"><i class="fa fa-power-off"></i>Sair</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header><!-- /header -->
+        <!-- /#header -->
+
+        <div class="content">
+            <div class="card">
+
+                <div class="breadcrumbs-inner">
+                    <div class="row m-0">
+                        <div class="col-sm-4">
+                            <div class="page-header float-left">
+                                <div class="page-title">
+                                    <h1>Gestão de Materiais</h1>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="showtable" class="content">
+                <div class="animated-fadeIn">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+
+
+                            <div class="orders">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="box-title">Materiais </h4>
+                                    </div>
+                                    <div class="card-body--">
+                                        <div class="table-stats order-table ov-h">
+                                            <table class="table" id="tblMaterials"><!--
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Tipo de Material</th>
+                                                        <th>Preço</th>
+                                                        <th>Alugados</th>
+                                                        <th>Entregues</th>
+                                                        <th>Por entregar</th>
+                                                        <th>Por alugar</th>
+                                                        <th>Editar/Eliminar</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><span class="id"></span> 1 </td>
+                                                        <td><span class="material"></span> Tenda </td>
+                                                        <td><span class="preco">20€</span> </td>
+                                                        <td><span class="m_alugados">0</span> </td>
+                                                        <td><span class="m_entregues">0</span></td>
+                                                        <td><span class="m_por_entregar">0</span></td>
+                                                        <td><span class="m_por_alugar">100</span></td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#editar"
+                                                                type="submit" class="btn editar"><i
+                                                                    class="menu-icon ti-pencil-alt"
+                                                                    style="color:white;background-color: #086A87;"></i></button>
+                                                            <button data-toggle="modal" data-target="#eliminar"
+                                                                type="reset" class="btn eliminar">
+                                                                <i class="menu-icon ti-trash"
+                                                                    style="color:white"></i></button><span></span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="id"></span> 2 </td>
+                                                        <td><span class="material"></span> Cadeira </td>
+                                                        <td><span class="preco">5€</span> </td>
+                                                        <td><span class="m_alugados">0</span> </td>
+                                                        <td><span class="m_entregues">0</span></td>
+                                                        <td><span class="m_por_entregar">0</span></td>
+                                                        <td><span class="m_por_alugar">100</span></td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#editar"
+                                                                type="submit" class="btn editar"><i
+                                                                    class="menu-icon ti-pencil-alt"
+                                                                    style="color:white"></i></button>
+                                                            <button data-toggle="modal" data-target="#eliminar"
+                                                                type="reset" class="btn eliminar">
+                                                                <i class="menu-icon ti-trash"
+                                                                    style="color:white"></i></button><span></span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="id"></span> 3 </td>
+                                                        <td><span class="material"></span> Colchão </td>
+                                                        <td><span class="preco">10€</span> </td>
+                                                        <td><span class="m_alugados">0</span> </td>
+                                                        <td><span class="m_entregues">0</span></td>
+                                                        <td><span class="m_por_entregar">0</span></td>
+                                                        <td><span class="m_por_alugar">100</span></td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#editar"
+                                                                type="submit" class="btn editar"><i
+                                                                    class="menu-icon ti-pencil-alt"
+                                                                    style="color:white"></i></button>
+                                                            <button data-toggle="modal" data-target="#eliminar"
+                                                                type="reset" class="btn eliminar">
+                                                                <i class="menu-icon ti-trash"
+                                                                    style="color:white"></i></button><span></span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="id"></span> 4 </td>
+                                                        <td><span class="material"></span> Mesa </td>
+                                                        <td><span class="preco">10€</span> </td>
+                                                        <td><span class="m_alugados">0</span> </td>
+                                                        <td><span class="m_entregues">0</span></td>
+                                                        <td><span class="m_por_entregar">0</span></td>
+                                                        <td><span class="m_por_alugar">100</span></td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#editar"
+                                                                type="submit" class="btn editar"><i
+                                                                    class="menu-icon ti-pencil-alt"
+                                                                    style="color:white"></i></button>
+                                                            <button data-toggle="modal" data-target="#eliminar"
+                                                                type="reset" class="btn eliminar">
+                                                                <i class="menu-icon ti-trash"
+                                                                    style="color:white"></i></button><span></span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="id"></span> 5 </td>
+                                                        <td><span class="material"></span> Saco de cama </td>
+                                                        <td><span class="preco">10€</span> </td>
+                                                        <td><span class="m_alugados">0</span> </td>
+                                                        <td><span class="m_entregues">0</span></td>
+                                                        <td><span class="m_por_entregar">0</span></td>
+                                                        <td><span class="m_por_alugar">100</span></td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#editar"
+                                                                type="submit" class="btn editar"><i
+                                                                    class="menu-icon ti-pencil-alt"
+                                                                    style="color:white"></i></button>
+                                                            <button data-toggle="modal" data-target="#eliminar"
+                                                                type="reset" class="btn eliminar">
+                                                                <i class="menu-icon ti-trash"
+                                                                    style="color:white"></i></button><span></span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="id" s></span> 6 </td>
+                                                        <td><span class="material"></span> Power bank </td>
+                                                        <td><span class="preco">5€</span> </td>
+                                                        <td><span class="m_alugados">0</span> </td>
+                                                        <td><span class="m_entregues">0</span></td>
+                                                        <td><span class="m_por_entregar">0</span></td>
+                                                        <td><span class="m_por_alugar">100</span></td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#editar"
+                                                                type="submit" class="btn editar"><i
+                                                                    class="menu-icon ti-pencil-alt"
+                                                                    style="color:white"></i></button>
+                                                            <button data-toggle="modal" data-target="#eliminar"
+                                                                type="reset" class="btn eliminar">
+                                                                <i class="menu-icon ti-trash"
+                                                                    style="color:white"></i></button><span></span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>-->
+
+                                            </table>
+                                        </div>
+
+                                    </div> <!-- /.table-stats -->
+                                </div>
+                            </div> <!-- /.card -->
+                        </div> <!-- /.col-lg-8 -->
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Editar Material -->
+        <div class="modal fade" id="editar" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" >
+                        <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
+                        <h4 class="modal-title" style="background-color: #fff;color: 000;">Editar Material</h4>
+                    </div>
+                    <div class="modal-body stat-widget-two">
+
+                        <p style="color: black; "> Deseja
+                            adicionar ou remover a quantidade de material disponível? </p>
+                        <input style="color: black;" type="radio" name="opc" checked> Adicionar<br>
+                        <input type="radio" name="opc"> Remover<br>
+                        <input type="radio" name="opc" checked> Sem Alterações<br>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="cc-payment" class="control-label mb-1">Quantidade desejada</label>
+                                    <input id="quantidade" name="quantidade_material" type="number" class="form-control"
+                                        min="0" width="220px">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="cc-payment" class="control-label mb-1">Preço</label>
+                                    <input id="preco" name="preco_material" type="number" class="form-control" min="0"
+                                        style="width: 220px;">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button" class="btn btn-default" style="background-color: #086A87;">
+                                Guardar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Eliminar -->
+
+        <div class="modal fade" id="eliminar" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Eliminar Material</h4>
+
+                    </div>
+                    <div class="modal-body stat-widget-two">
+                        <p style="color:black;">Tem a certeza que deseja eliminar material?</p>
+
+                    </div>
+                    <div class="modal-footer">                       
+                        <button type="button" class="btn nao" style="background-color: #7e7e7e;">Não</button>
+                        <button type="button" class="btn sim" style="background-color: #086A87;">Sim</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="materiais.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js"></script>
+
+</body>
+
+</html>
