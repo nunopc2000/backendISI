@@ -49,7 +49,7 @@ window.onload = () => {
 
                     var markerDestino1 = new google.maps.Marker({
                          map: map1, position: coordsDestino1,
-                         icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png" , 
+                         icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png" , 
                          });
 
                     //console.log(place);
@@ -64,7 +64,7 @@ window.onload = () => {
 
                     var markerDestino2 = new google.maps.Marker({
                         map: map2, position: coordsDestino2,
-                        icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png" , 
+                        icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png" , 
                         });
 
                     //console.log(place);
@@ -77,7 +77,7 @@ window.onload = () => {
 
                     var markerDestino3 = new google.maps.Marker({
                         map: map3, position: coordsDestino3,
-                        icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png" , 
+                        icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png" , 
                         });
 
                 } 
@@ -89,7 +89,7 @@ window.onload = () => {
 
                     var markerDestino4 = new google.maps.Marker({
                         map: map4, position: coordsDestino4,
-                        icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png" , 
+                        icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png" , 
                         });
 
                 }
@@ -101,7 +101,7 @@ window.onload = () => {
 
                     var markerDestino5 = new google.maps.Marker({
                         map: map5, position: coordsDestino5,
-                        icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png" , 
+                        icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png" , 
                         });
 
                 }
@@ -114,7 +114,7 @@ window.onload = () => {
 
                     var markerDestino6 = new google.maps.Marker({
                         map: map6, position: coordsDestino6,
-                        icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png" , 
+                        icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png" , 
                         });
 
                 } 
