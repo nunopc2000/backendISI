@@ -1,0 +1,9 @@
+{
+  "name": "EasyFestival",
+  "short_name": "EasyFestival",
+  "theme_color": "#920000",
+  "background_color": "#920000",
+  "display": "standalone",
+  "scope": "/index.html",
+  "start_url": "/"
+}
