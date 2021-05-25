@@ -2,7 +2,7 @@ window.onload = () => {
 
     const renderPlaces = async () => {
 
-        const response = await fetch(`http://localhost:5050/places`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/places`)
         const p = await response.json()
         const places = p.data
 

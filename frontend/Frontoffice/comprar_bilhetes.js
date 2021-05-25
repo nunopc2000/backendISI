@@ -35,7 +35,7 @@ window.onload = () => {
         <div class="col-12">
                     
             `
-        const response = await fetch(`http://localhost:5050/products`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/products`)
         const materiais = await response.json()
         console.log(materiais)
         let i = 1
@@ -78,7 +78,7 @@ window.onload = () => {
         <select class="form-control form-control" id="material" required >
         <option></option>
     `
-        const response = await fetch(`http://localhost:5050/products`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/products`)
         const mats = await response.json()
         let i = 1
         for (const mat of mats) {
@@ -116,7 +116,7 @@ async function f() {
     }
     console.log(user)
 
-    const responseC = await fetch(`http://localhost:5050/getClientes`)
+    const responseC = await fetch(`https://backend-easyfestival.herokuapp.com/getClientes`)
     const clients = await responseC.json()
     console.log(clients.clients)
     const c = clients.clients
@@ -134,7 +134,7 @@ async function f() {
     console.log(nomeCliente)
     console.log(mat1)
 
-    const responseTR = await fetch(`http://localhost:5050/products`)
+    const responseTR = await fetch(`https://backend-easyfestival.herokuapp.com/products`)
     const pro = await responseTR.json()
     //const pro = products.items
     console.log(pro)
@@ -161,7 +161,7 @@ async function f() {
 
     }
     console.log(fatura)
-    const response = await fetch(`http://localhost:5050/products`)
+    const response = await fetch(`https://backend-easyfestival.herokuapp.com/products`)
     const materiais = await response.json()
     //console.log(materiais)
     let i = 1
@@ -213,7 +213,7 @@ async function f() {
 
 
 
-                                    return fetch(`http://localhost:5050/buyTicket`, {
+                                    return fetch(`https://backend-easyfestival.herokuapp.com/buyTicket`, {
                                         headers: {
                                             "Accept": "application/json",
                                             "Content-Type": "application/json"
@@ -225,7 +225,7 @@ async function f() {
                                         console.log(result.status)
                                         if (result.status == "200") {
                                             console.log("cheguei a seguir ao 200")
-                                            return fetch(`http://localhost:5050/createInvoice`, {
+                                            return fetch(`https://backend-easyfestival.herokuapp.com/createInvoice`, {
                                                 headers: {
                                                     "Access-Control-Allow-Origin": "*",
                                                     "Accept": "application/json",
@@ -239,7 +239,7 @@ async function f() {
                                             form.reset()
                                             })
                                             /*                                        
-                                            responseFatura = await fetch(`http://localhost:5050/createInvoice`, {
+                                            responseFatura = await fetch(`https://backend-easyfestival.herokuapp.com/createInvoice`, {
                                                 headers: {
                                                     "Access-Control-Allow-Origin": "*",
                                                     "Accept": "application/json",
@@ -272,7 +272,7 @@ async function f() {
                     //FIM DO PAYPAL
 
 
-                    /*response1 = await fetch(`http://localhost:5050/buyTicket`, {
+                    /*response1 = await fetch(`https://backend-easyfestival.herokuapp.com/buyTicket`, {
                         headers: {
                             "Accept": "application/json",
                             "Content-Type": "application/json"
@@ -281,7 +281,7 @@ async function f() {
                         body: JSON.stringify(user)
 
                     })
-                    const responseC = await fetch(`http://localhost:5050/getClientes`)
+                    const responseC = await fetch(`https://backend-easyfestival.herokuapp.com/getClientes`)
                     const clients = await responseC.json()
                     console.log(clients.clients)
                     const c = clients.clients
@@ -297,7 +297,7 @@ async function f() {
                     console.log(nif)
                     console.log(nomeCliente)
                     console.log(mat1)
-                    const responseTR = await fetch(`http://localhost:5050/products`)
+                    const responseTR = await fetch(`https://backend-easyfestival.herokuapp.com/products`)
                     const pro = await responseTR.json()
                     //const pro = products.items
                     console.log(pro)
@@ -324,7 +324,7 @@ async function f() {
 
                     }
 
-                    responseFatura = await fetch(`http://localhost:5050/createInvoice`, {
+                    responseFatura = await fetch(`https://backend-easyfestival.herokuapp.com/createInvoice`, {
                         headers: {
                             "Access-Control-Allow-Origin": "*",
                             "Accept": "application/json",

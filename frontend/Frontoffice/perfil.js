@@ -24,7 +24,7 @@ window.onload = () => {
         </thead>
         <tbody>`
 
-        const response = await fetch(`http://localhost:5050/stockMovs`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/stockMovs`)
         const movs = await response.json()
         //const g = gestores.data
         //console.log(movs[0])
@@ -196,7 +196,7 @@ window.onload = () => {
         tblCompras.innerHTML = str
 
 
-    response1 = await fetch(`http://localhost:5050/userByEmail/${emailStorage}`)
+    response1 = await fetch(`https://backend-easyfestival.herokuapp.com/userByEmail/${emailStorage}`)
     const pa = await response1.json()
     const p = pa.data.items
     //console.log(p)

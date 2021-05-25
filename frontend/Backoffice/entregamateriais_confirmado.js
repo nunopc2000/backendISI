@@ -8,7 +8,7 @@ window.onload = () => {
         const id_aluguer = document.getElementById("id_aluguer").value
         console.log(id_aluguer)
 
-        const response = await fetch(`http://localhost:5050/stockMovs`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/stockMovs`)
         const movs = await response.json()
         console.log(movs)
         let i = 1
@@ -35,7 +35,7 @@ window.onload = () => {
                     console.log(user)
                     console.log("-----------")
                     try {
-                        response1 = await fetch(`http://localhost:5050/confirm`, {
+                        response1 = await fetch(`https://backend-easyfestival.herokuapp.com/confirm`, {
                             headers: {
                                 "Accept": "application/json",
                                 "Content-Type": "application/json"

@@ -9,7 +9,7 @@ window.onload = () => {
         const productsId = []
         const productsType = []
         const productPrice = []
-        const response1 = await fetch(`http://localhost:5050/products`)
+        const response1 = await fetch(`https://backend-easyfestival.herokuapp.com/products`)
         const mats = await response1.json()
         let cont = 0
         for (const mat of mats) {
@@ -18,7 +18,7 @@ window.onload = () => {
             productPrice[cont] = mat.price
             cont++
         }
-        const response = await fetch(`http://localhost:5050/stockMovs`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/stockMovs`)
         const materiais = await response.json()
         let i = 1
         var qt = 0
@@ -61,7 +61,7 @@ window.onload = () => {
         let strHtml = `
         <p class="card-category" style="color: black">Número de Gestores de Materiais</p>`
 
-        const response = await fetch(`http://localhost:5050/users`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/users`)
         const users = await response.json()
         const user = users.data
         let j = 1
@@ -86,7 +86,7 @@ window.onload = () => {
         let strHtml = `
         <p class="card-category" style="color: black">Número de Gestores de Bilhetes</p>`
 
-        const response = await fetch(`http://localhost:5050/users`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/users`)
         const users = await response.json()
         const user = users.data
         let i = 1
@@ -111,7 +111,7 @@ window.onload = () => {
         let strHtml = `
         <p class="card-category" style="color: black">Número de estabelecimentos</p>`
 
-        const response = await fetch(`http://localhost:5050/places`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/places`)
         const places = await response.json()
         const place = places.data
         //console.log(place)
@@ -134,7 +134,7 @@ window.onload = () => {
         let strHtml = `
         <p class="card-category" style="color: black">Número de Clientes Registados</p>`
 
-        const response = await fetch(`http://localhost:5050/users`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/users`)
         const users = await response.json()
         const user = users.data
         let i = 1
@@ -160,7 +160,7 @@ window.onload = () => {
         console.log("=OLA")
 
 
-        const response = await fetch(`http://localhost:5050/users`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/users`)
         const users = await response.json()
         const user = users.data
         let i = 1
@@ -195,7 +195,7 @@ window.onload = () => {
 */
 
     const renderBilhetes = async () => {
-        const response = await fetch(`http://localhost:5050/products`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/products`)
         const products = await response.json()
 
         let i = 1
@@ -226,7 +226,7 @@ var serie = []
 renderBilhetes()
 
 const renderMat = async () => {
-    const response = await fetch(`http://localhost:5050/products`)
+    const response = await fetch(`https://backend-easyfestival.herokuapp.com/products`)
     const products = await response.json()
 
     let i = 1
@@ -266,7 +266,7 @@ const Insc = document.getElementById("receitaB")
         const productsId = []
         const productsType = []
         const productPrice = []
-        const responseQ = await fetch(`http://localhost:5050/products`)
+        const responseQ = await fetch(`https://backend-easyfestival.herokuapp.com/products`)
         const mats = await responseQ.json()
         let cont = 0
         for (const mat of mats) {
@@ -276,12 +276,12 @@ const Insc = document.getElementById("receitaB")
             cont++
         }
         //console.log(productsType)
-        const response = await fetch(`http://localhost:5050/stockMovs`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/stockMovs`)
         const movs = await response.json()
         let j = 0
 
         for (const material of movs) {
-            //const responseQ = await fetch(`http://localhost:5050/products`)
+            //const responseQ = await fetch(`https://backend-easyfestival.herokuapp.com/products`)
             //const mats = await responseQ.json()
             //let i = 1
             //for (const mat of mats) {
@@ -326,7 +326,7 @@ const Insc = document.getElementById("receitaB")
         const productsType = []
         const productPrice = []
         
-        const responseQ = await fetch(`http://localhost:5050/products`)
+        const responseQ = await fetch(`https://backend-easyfestival.herokuapp.com/products`)
         const mats = await responseQ.json()
         let cont = 0
         for (const mat of mats) {
@@ -336,12 +336,12 @@ const Insc = document.getElementById("receitaB")
             cont++
         }
         //console.log(productsType)
-        const response = await fetch(`http://localhost:5050/stockMovs`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/stockMovs`)
         const movs = await response.json()
         let j = 0
 
         for (const material of movs) {
-            //const responseQ = await fetch(`http://localhost:5050/products`)
+            //const responseQ = await fetch(`https://backend-easyfestival.herokuapp.com/products`)
             //const mats = await responseQ.json()
             //let i = 1
             //for (const mat of mats) {

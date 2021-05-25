@@ -15,7 +15,7 @@ window.onload = () => {
         </thead>
         <tbody>`
 
-        const response = await fetch(`http://localhost:5050/products`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/products`)
         const materiais = await response.json()
         //const g = gestores.data
         //console.log(materiais[9])
@@ -66,7 +66,7 @@ window.onload = () => {
                             product_id: product_id
                         }
                         try {
-                            const response = await fetch(`http://localhost:5050/deleteProduct/${product_id}`, {
+                            const response = await fetch(`https://backend-easyfestival.herokuapp.com/deleteProduct/${product_id}`, {
                                 method: "DELETE"
                             })
                             const isRemoved = await response.json()
@@ -128,7 +128,7 @@ window.onload = () => {
                         //const a = true
                         
                         try {
-                            responseEd = await fetch(`http://localhost:5050/updateTicket`, {
+                            responseEd = await fetch(`https://backend-easyfestival.herokuapp.com/updateTicket`, {
                                 headers: {
                                     "Content-Type": "application/json; charset=utf-8",
                                     "Access-Control-Allow-Origin": "*"
@@ -139,7 +139,7 @@ window.onload = () => {
                             })
                             renderMateriais()
                             
-                            response1 = await fetch(`http://localhost:5050/editProduct`, {
+                            response1 = await fetch(`https://backend-easyfestival.herokuapp.com/editProduct`, {
                             headers: {
                                 "Accept": "application/json",
                                 "Content-Type": "application/json"

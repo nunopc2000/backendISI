@@ -8,7 +8,7 @@ window.onload = () => {
     const contribuinte = document.getElementById("contribuinte")
 
     const renderUser = async () => {
-    response = await fetch(`http://localhost:5050/userByEmail/${emailStorage}`)
+    response = await fetch(`https://backend-easyfestival.herokuapp.com/userByEmail/${emailStorage}`)
     const pa = await response.json()
     const p = pa.data.items
     console.log(p)

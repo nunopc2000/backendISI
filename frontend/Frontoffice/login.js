@@ -9,7 +9,7 @@ window.onload = () => {
         const email = document.getElementById("emailL").value
         const password = document.getElementById("passwordL").value
 
-        response = await fetch(`http://localhost:5050/userByEmail/${email}`)
+        response = await fetch(`https://backend-easyfestival.herokuapp.com/userByEmail/${email}`)
         const people = await response.json()
         console.log("!!!!!!!!!!!!!!!!!!!!!" + people)
         const p = people.data
@@ -24,7 +24,7 @@ window.onload = () => {
         /*console.log("fora: " + cargo)
         console.log("fora: " + pass)
         console.log("FIZ O FETCH")*/
-        response = await fetch(`http://localhost:5050/login/${email}/${password}`)
+        response = await fetch(`https://backend-easyfestival.herokuapp.com/login/${email}/${password}`)
         const pa = await response.json()
         console.log("RESPOSTA NO FRONT: " + pa)
         /*if(pa==true){
@@ -82,7 +82,7 @@ window.onload = () => {
 
         if (pa.is_nif == true) {
             if (password === password2) {
-                response1 = await fetch(`http://localhost:5050/addUser`, {
+                response1 = await fetch(`https://backend-easyfestival.herokuapp.com/addUser`, {
                     headers: {
                         "Accept": "application/json",
                         "Content-Type": "application/json"
@@ -93,7 +93,7 @@ window.onload = () => {
                 })
 
 
-                responseIX = await fetch(`http://localhost:5050/createContact`, {
+                responseIX = await fetch(`https://backend-easyfestival.herokuapp.com/createContact`, {
                     headers: {
                         "Accept": "application/json",
                         "Content-Type": "application/json"

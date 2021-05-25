@@ -17,7 +17,7 @@ window.onload = () => {
         }
         console.log(user)
 
-        response = await fetch(`http://localhost:5050/addPlace`, {
+        response = await fetch(`https://backend-easyfestival.herokuapp.com/addPlace`, {
             headers: {
                 "Access-Control-Allow-Origin": "*",
                 "Accept": "application/json",
@@ -53,7 +53,7 @@ window.onload = () => {
             </thead>
         <tbody>`
 
-        const response = await fetch(`http://localhost:5050/places`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/places`)
         const p = await response.json()
         const places = p.data
         // const lat = "7abcfc2737c4658269489646f1573be349ecc40a"
@@ -97,7 +97,7 @@ window.onload = () => {
                         let placeID = btnDelete[i].getAttribute("id")
                         console.log(placeID)
                         try {
-                            const response = await fetch(`http://localhost:5050/deletePlace/${placeID}`, {
+                            const response = await fetch(`https://backend-easyfestival.herokuapp.com/deletePlace/${placeID}`, {
                                 method: "DELETE"
                             })
                             const isRemoved = await response.json()
@@ -162,7 +162,7 @@ window.onload = () => {
                         console.log(json)
                        
                         try {
-                            responseEd = await fetch(`http://localhost:5050/putPlace/${id}`, {
+                            responseEd = await fetch(`https://backend-easyfestival.herokuapp.com/putPlace/${id}`, {
                                 headers: {
                                     "Content-Type": "application/json; charset=utf-8",
                                     "Access-Control-Allow-Origin": "*"

@@ -8,7 +8,7 @@ window.onload = () => {
         const id_aluguer = document.getElementById("id_aluguer").value
         console.log(id_aluguer)
         console.log("+++++++++++")
-        const response = await fetch(`http://localhost:5050/stockMovs`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/stockMovs`)
         const movs = await response.json()
         let i = 1
         for (const mov of movs) {
@@ -17,7 +17,7 @@ window.onload = () => {
                 console.log(mov.qty)
                 var product_id = mov.product_id
                 console.log(product_id)
-                const response1 = await fetch(`http://localhost:5050/products`)
+                const response1 = await fetch(`https://backend-easyfestival.herokuapp.com/products`)
                 const materiais = await response1.json()
                 let j = 1
                 for (const mat of materiais) {
@@ -46,7 +46,7 @@ async function button() {
     console.log(id_aluguer)
 
     console.log("+++++++++++")
-    const response = await fetch(`http://localhost:5050/stockMovs`)
+    const response = await fetch(`https://backend-easyfestival.herokuapp.com/stockMovs`)
     const movs = await response.json()
     let i = 1
     for (const mov of movs) {
@@ -56,7 +56,7 @@ async function button() {
             var product_id = mov.product_id
             var quanti = Math.abs(mov.qty)
             console.log(product_id)
-            const response1 = await fetch(`http://localhost:5050/products`)
+            const response1 = await fetch(`https://backend-easyfestival.herokuapp.com/products`)
             const materiais = await response1.json()
             let j = 1
             for (const mat of materiais) {
@@ -118,7 +118,7 @@ async function submeter() {
     const id_aluguer = document.getElementById("id_aluguer").value
     console.log(id_aluguer)
 
-    const response = await fetch(`http://localhost:5050/stockMovs`)
+    const response = await fetch(`https://backend-easyfestival.herokuapp.com/stockMovs`)
     const movs = await response.json()
     let i = 1
     for (const mov of movs) {
@@ -146,7 +146,7 @@ async function submeter() {
     }
 
     try {
-        response1 = await fetch(`http://localhost:5050/devolverProduto`, {
+        response1 = await fetch(`https://backend-easyfestival.herokuapp.com/devolverProduto`, {
             headers: {
                 "Accept": "application/json",
                 "Content-Type": "application/json"
@@ -156,7 +156,7 @@ async function submeter() {
 
         })
 
-        response5 = await fetch(`http://localhost:5050/editProduct`, {
+        response5 = await fetch(`https://backend-easyfestival.herokuapp.com/editProduct`, {
             headers: {
                 "Accept": "application/json",
                 "Content-Type": "application/json"

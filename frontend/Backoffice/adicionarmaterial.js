@@ -20,7 +20,7 @@ window.onload = () => {
         }
 
         console.log(user)
-        response = await fetch(`http://localhost:5050/addProduct`, {
+        response = await fetch(`https://backend-easyfestival.herokuapp.com/addProduct`, {
             headers: {
                 "Access-Control-Allow-Origin": "*",
                 "Accept": "application/json",
@@ -30,7 +30,7 @@ window.onload = () => {
             body: JSON.stringify(user)
         })
 
-        responseIX = await fetch(`http://localhost:5050/createItems`, {
+        responseIX = await fetch(`https://backend-easyfestival.herokuapp.com/createItems`, {
             headers: {
                 "Access-Control-Allow-Origin": "*",
                 "Accept": "application/json",

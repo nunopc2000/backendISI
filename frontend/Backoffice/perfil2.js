@@ -11,7 +11,7 @@ window.onload = () => {
     const passNova = document.getElementById("passNova")
 
     const renderUser = async () => {
-        response = await fetch(`http://localhost:5050/userByEmail/${emailStorage}`)
+        response = await fetch(`https://backend-easyfestival.herokuapp.com/userByEmail/${emailStorage}`)
         const pa = await response.json()
         const p = pa.data.items
         console.log(p)
@@ -62,7 +62,7 @@ window.onload = () => {
 
         if (passAtual)
 /*
-        responseEd = await fetch(`http://localhost:5050/updateProduct`, {
+        responseEd = await fetch(`https://backend-easyfestival.herokuapp.com/updateProduct`, {
             headers: {
                 "Content-Type": "application/json; charset=utf-8",
                 "Access-Control-Allow-Origin": "*"

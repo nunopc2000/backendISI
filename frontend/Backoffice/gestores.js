@@ -33,7 +33,7 @@ window.onload = () => {
         const pa = await response.json()
         if (pa.is_nif == true) {
             if (cargo == "Gestor de Bilhetes") {
-                response = await fetch(`http://localhost:5050/addTicketManager`, {
+                response = await fetch(`https://backend-easyfestival.herokuapp.com/addTicketManager`, {
                     headers: {
                         "Access-Control-Allow-Origin": "*",
                         "Accept": "application/json",
@@ -45,7 +45,7 @@ window.onload = () => {
                 swal({ type: 'success', title: 'Gestor adicionado', text: 'Ação concluída com sucesso' })
 
             } else {
-                response = await fetch(`http://localhost:5050/addMaterialManager`, {
+                response = await fetch(`https://backend-easyfestival.herokuapp.com/addMaterialManager`, {
                     headers: {
                         "Access-Control-Allow-Origin": "*",
                         "Accept": "application/json",
@@ -78,7 +78,7 @@ window.onload = () => {
         </thead>
         <tbody>
     `
-        const response = await fetch(`http://localhost:5050/users`)
+        const response = await fetch(`https://backend-easyfestival.herokuapp.com/users`)
         const gestores = await response.json()
         const g = gestores.data
 
@@ -120,7 +120,7 @@ window.onload = () => {
                     if (result.value) {
                         let gestorID = btnDelete[i].getAttribute("id")
                         try {
-                            const response = await fetch(`http://localhost:5050/deleteUser/${gestorID}`, {
+                            const response = await fetch(`https://backend-easyfestival.herokuapp.com/deleteUser/${gestorID}`, {
                                 method: "DELETE"
                             })
                             swal({ type: 'success', title: 'Gestor removido', text: 'Ação concluída com sucesso' })
@@ -188,7 +188,7 @@ window.onload = () => {
                         console.log(pa.is_nif)
                         if (pa.is_nif == true) {
                         try {
-                            responseEd = await fetch(`http://localhost:5050/putData/${id}`, {
+                            responseEd = await fetch(`https://backend-easyfestival.herokuapp.com/putData/${id}`, {
                                 headers: {
                                     "Content-Type": "application/json; charset=utf-8",
                                     "Access-Control-Allow-Origin": "*"
