@@ -75,12 +75,12 @@ window.onload = () => {
 
         }
         console.log(user)
-        response2 = await fetch(`http://www.nif.pt/?json=1&q=${nif}&key=5b484eb38c08d6026b83e0f02410d63d`)
+        response2 = await fetch(`https://www.nif.pt/?json=1&q=${nif}&key=5b484eb38c08d6026b83e0f02410d63d`)
         const pa = await response2.json()
         console.log(pa.is_nif)
 
 
-        //if (pa.is_nif == true) {
+        if (pa.is_nif == true) {
             if (password === password2) {
                 response1 = await fetch(`https://backend-easyfestival.herokuapp.com/addUser`, {
                     headers: {
@@ -109,10 +109,10 @@ window.onload = () => {
                     'Os dados foram guardados corretamente',
                     'success'
                 )
-            }/*
+            }
         } else {
             swal({ type: 'error', title: 'Nif inválido', text: 'O registo não foi concluído' })
-        }*/
+        }
     })
 
 

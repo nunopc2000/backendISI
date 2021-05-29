@@ -49,7 +49,7 @@ window.onload = () => {
 
                     var markerDestino1 = new google.maps.Marker({
                          map: map1, position: coordsDestino1,
-                         icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png" , 
+                         icon: "https://maps.google.com/mapfiles/kml/pal2/icon32.png" , 
                          });
 
                     //console.log(place);
