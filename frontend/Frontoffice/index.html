@@ -2,7 +2,7 @@
 <html class="no-js" lang="zxx">
 
 <head>
-    <link rel="manifest" href="webmanifest.json">
+    
     <link rel="canonical" href="https://backend-easyfestival.herokuapp.com/">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./images/icons/icon-152x152.png">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
     <style>
         .button3 {
@@ -75,18 +77,7 @@
 </head>
 
 <body>
-    <script>
-        if ('serviceWorker' in navigator){
-
-            navigator.serviceWorker.register('sw.js')
-            .then(function () {
-                console.log('service worker registered');
-            })
-            .catch(function () {
-                console.warn('service worker failed');
-            });
-        }
-    </script>
+    
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -350,6 +341,18 @@
     <script src="js/mail-script.js"></script>
     <script src="login.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        if ('serviceWorker' in navigator){
+
+            navigator.serviceWorker.register('pwabuilder-sw.js')
+            .then(function () {
+                console.log('service worker registered');
+            })
+            .catch(function () {
+                console.warn('service worker failed');
+            });
+        }
+    </script>
 </body>
 
 </html>
