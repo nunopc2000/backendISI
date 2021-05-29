@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./images/icons/icon-152x152.png">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
     <style>
         .btn-success {
@@ -296,6 +298,18 @@
 
 
             <!-- JS here -->
+            <script>
+                if ('serviceWorker' in navigator){
+        
+                    navigator.serviceWorker.register('pwabuilder-sw.js')
+                    .then(function () {
+                        console.log('service worker registered');
+                    })
+                    .catch(function () {
+                        console.warn('service worker failed');
+                    });
+                }
+            </script>
             <script>
                 function Mudarestado(el) {
                   var display = document.getElementById(el).style.display;

@@ -48,7 +48,8 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./images/icons/icon-152x152.png">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -292,6 +293,18 @@
     <script src="alugarMaterial.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js"></script>
+    <script>
+        if ('serviceWorker' in navigator){
+
+            navigator.serviceWorker.register('pwabuilder-sw.js')
+            .then(function () {
+                console.log('service worker registered');
+            })
+            .catch(function () {
+                console.warn('service worker failed');
+            });
+        }
+    </script>
     <script>
         $('.btn-plus, .btn-minus').on('click', function (e) {
             const isNegative = $(e.target).closest('.btn-minus').is('.btn-minus');

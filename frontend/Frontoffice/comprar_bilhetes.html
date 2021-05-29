@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <link rel="apple-touch-icon" href="./images/icons/icon-152x152.png">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
@@ -269,6 +269,18 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/gijgo.min.js"></script>
+    <script>
+        if ('serviceWorker' in navigator){
+
+            navigator.serviceWorker.register('pwabuilder-sw.js')
+            .then(function () {
+                console.log('service worker registered');
+            })
+            .catch(function () {
+                console.warn('service worker failed');
+            });
+        }
+    </script>
     <script>
         paypal.Buttons().render('#paypal-button');
         // This function displays Smart Payment Buttons on your web page.

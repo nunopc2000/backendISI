@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="font/flaticon.css"> -->
-
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./images/icons/icon-152x152.png">
     <link rel="stylesheet" type="text/css" href="css/flaticon.css">
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8RU7HF7lWAJMcha9rNXd0HsrUhz6MAoY"
@@ -388,6 +389,18 @@
     <script src="js/jquery.form.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/mail-script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator){
+
+            navigator.serviceWorker.register('pwabuilder-sw.js')
+            .then(function () {
+                console.log('service worker registered');
+            })
+            .catch(function () {
+                console.warn('service worker failed');
+            });
+        }
+    </script>
     <script>
         function myMap() {
             var mapProp = {

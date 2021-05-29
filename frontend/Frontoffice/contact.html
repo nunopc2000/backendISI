@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./images/icons/icon-152x152.png">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -285,6 +287,18 @@
 <!-- form itself end -->
     
         <!-- JS here -->
+        <script>
+            if ('serviceWorker' in navigator){
+    
+                navigator.serviceWorker.register('pwabuilder-sw.js')
+                .then(function () {
+                    console.log('service worker registered');
+                })
+                .catch(function () {
+                    console.warn('service worker failed');
+                });
+            }
+        </script>
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="js/vendor/jquery-1.12.4.min.js"></script>
         <script src="js/popper.min.js"></script>

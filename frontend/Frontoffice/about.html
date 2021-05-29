@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="font/flaticon.css"> -->
-
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./images/icons/icon-152x152.png">
     <link rel="stylesheet" type="text/css" href="css/flaticon.css">
 </head>
 
@@ -350,6 +351,18 @@
     <script src="js/mail-script.js"></script>
     <script src="login.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        if ('serviceWorker' in navigator){
+
+            navigator.serviceWorker.register('pwabuilder-sw.js')
+            .then(function () {
+                console.log('service worker registered');
+            })
+            .catch(function () {
+                console.warn('service worker failed');
+            });
+        }
+    </script>
 </body>
 
 </html>
