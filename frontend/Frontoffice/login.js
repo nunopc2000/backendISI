@@ -80,7 +80,7 @@ window.onload = () => {
         console.log(pa.is_nif)
 
 
-        if (pa.is_nif == true) {
+        //if (pa.is_nif == true) {
             if (password === password2) {
                 response1 = await fetch(`https://backend-easyfestival.herokuapp.com/addUser`, {
                     headers: {
@@ -109,10 +109,10 @@ window.onload = () => {
                     'Os dados foram guardados corretamente',
                     'success'
                 )
-            }
+            }/*
         } else {
             swal({ type: 'error', title: 'Nif inválido', text: 'O registo não foi concluído' })
-        }
+        }*/
     })
 
 
