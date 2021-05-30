@@ -186,7 +186,6 @@
             <div class="top-left">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="materiais.html"><img src="images/logo.png" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="materiais.html"><img src="images/logo2.png" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
@@ -241,29 +240,65 @@
                                             <form id="form">
                                                 <div class="row">
                                                     <div class="col-6">
+                                                        <a style="margin-left: 30%; margin-bottom: 10%;" class="button3" id="myBtn" ><img  width="250" height="250" src="images\qrcode.png" /></a>
                                                         
-                                                            <div style="margin-left: 20%;">
-                                                            <a style="margin-left: 10%;" class="button3" id="myBtn" ><img  width="100" height="100" src="images\qrcode.png" /></a>
-                                                            
-                                                            <div id="myModal" class="modal">
-                                                                <div class="modal-content">
-                                                                    <span class="close">&times;</span>
-                                                                    <h3 style="text-align: center;">Scan QR Code</h3>
-                                                                    <br>
-                                                                    <video style="margin: 0 auto;" width="90%" height="90%" id="camera"></video><br>
-                                                                    <text id="code">
-                                                                </div>
+                                                        <div id="myModal" class="modal ">
+                                                            <div class="modal-content">
+                                                                <span class="close">&times;</span>
+                                                                <h3 style="text-align: center;">Scan QR Code</h3>
+                                                                <br>
+                                                                <video style="margin: 0 auto;" width="90%" height="90%" id="camera"></video><br>
+                                                                <text id="code">
                                                             </div>
-                                                            
-                                                            </div>
-                                                            <br>
+                                                        </div>
+                                                        
+                                                        </div>
+                                                    <div class="col-6">
                                                             <div class="form-group">
                                                                 <label class="px-2">ID de aluguer </label>
                                                                 <input id="id_aluguer" value="" class="form-control" style="width: 80%;">
                                                             </div>
-                                                            <br>
-                                                        
-                                                        <br>
+                                                            <form id="cond">
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label mb-1">Material
+                                                                            danificado ? </label>
+                                                                            <br>
+                                                                            
+                                                                            <a name="danificado" class="btn btn-primary" style="background-color: #7e7e7e; border-color: #7e7e7e;margin-left: 16px;">
+                                                                            <input id="prazoS" type="radio" name="danificado"
+                                                                            class="btn btn-primary" value="S">
+                                                                            <i class="menu-icon ti-check" style="color:white"></i>
+                                                                        </a>
+                                                                        <a name="danificado" class="btn btn-primary" style="background-color: #7e7e7e; border-color: #7e7e7e;margin-left: 16px;">
+                                                                            <input id="prazoS" type="radio" name="danificado"
+                                                                            class="btn btn-primary" value="N">
+                                                                            <i class="menu-icon ti-close" style="color:white"></i>
+                                                                        </a>
+                                                                            
+                                                                    </div>
+                                                                    <br>
+                                                                    <!--
+                                                                    <div class="form-group">
+                                                                        <label for="cc-payment" class="control-label mb-1">Material
+                                                                            entregue
+                                                                            dentro do prazo ? </label>
+                                                                            <br>
+                                                                            <a name="tempo" class="btn btn-primary" style="background-color: #7e7e7e; border-color: #7e7e7e;margin-left: 16px;">
+                                                                                <input id="prazoS" type="radio" name="tempo"
+                                                                                class="btn btn-primary" value="S">
+                                                                                <i class="menu-icon ti-check" style="color:white"></i>
+                                                                            </a>
+                                                                            <a name="tempo" class="btn btn-primary" style="background-color: #7e7e7e; border-color: #7e7e7e;margin-left: 16px;">
+                                                                                <input id="prazoS" type="radio" name="tempo"
+                                                                                class="btn btn-primary" value="N">
+                                                                                <i class="menu-icon ti-close" style="color:white"></i>
+                                                                            </a>
+                                                                        
+                                                                            
+                                                                    </div>-->
+                                                                </div>
+                                                                </form>
                                                         <div class="form-group">
                                                             <div class="form-group">
                                                                 <button style="width: 80%;" type="button" onclick="button()"
@@ -278,46 +313,7 @@
                                                         
                                                         
                                                     </div>
-                                                    <form id="cond">
-                                                    <div class="col-6">
-                                                        <div class="form-group">
-                                                            <label class="control-label mb-1">Material
-                                                                danificado ? </label>
-                                                                <br>
-                                                                
-                                                                <a name="danificado" class="btn btn-primary" style="background-color: #7e7e7e; border-color: #7e7e7e;margin-left: 16px;">
-                                                                <input id="prazoS" type="radio" name="danificado"
-                                                                class="btn btn-primary" value="S">
-                                                                <i class="menu-icon ti-check" style="color:white"></i>
-                                                            </a>
-                                                            <a name="danificado" class="btn btn-primary" style="background-color: #7e7e7e; border-color: #7e7e7e;margin-left: 16px;">
-                                                                <input id="prazoS" type="radio" name="danificado"
-                                                                class="btn btn-primary" value="N">
-                                                                <i class="menu-icon ti-close" style="color:white"></i>
-                                                            </a>
-                                                                
-                                                        </div>
-                                                        <br>
-                                                        <div class="form-group">
-                                                            <label for="cc-payment" class="control-label mb-1">Material
-                                                                entregue
-                                                                dentro do prazo ? </label>
-                                                                <br>
-                                                                <a name="tempo" class="btn btn-primary" style="background-color: #7e7e7e; border-color: #7e7e7e;margin-left: 16px;">
-                                                                    <input id="prazoS" type="radio" name="tempo"
-                                                                    class="btn btn-primary" value="S">
-                                                                    <i class="menu-icon ti-check" style="color:white"></i>
-                                                                </a>
-                                                                <a name="tempo" class="btn btn-primary" style="background-color: #7e7e7e; border-color: #7e7e7e;margin-left: 16px;">
-                                                                    <input id="prazoS" type="radio" name="tempo"
-                                                                    class="btn btn-primary" value="N">
-                                                                    <i class="menu-icon ti-close" style="color:white"></i>
-                                                                </a>
-                                                            
-                                                                
-                                                        </div>
-                                                    </div>
-                                                    </form>
+                                                    
                                                     
                                                 </div>
                                                 <div class="row">
