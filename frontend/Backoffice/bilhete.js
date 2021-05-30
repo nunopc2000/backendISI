@@ -149,12 +149,12 @@ window.onload = () => {
                     
                         })
                        
-                            swal({ type: 'success', title: 'Material editado', text: 'Ação concluída com sucesso' })
+                            swal({ type: 'success', title: 'Bilhete editado', text: 'Ação concluída com sucesso' })
                             renderMateriais()
                             //console.log("antes catch")
                         } catch (err) {
                             //console.log("catch")
-                            swal({ type: 'error', title: 'Edição de Material', text: err })
+                            swal({ type: 'error', title: 'Edição de Bilhete', text: err })
                         }
 
                     }
