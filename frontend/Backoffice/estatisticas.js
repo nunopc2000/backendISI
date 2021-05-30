@@ -216,7 +216,7 @@ var serie = []
     i++
     //console.log(contB)
     var data = {
-        labels: [label],
+        labels: ["18 de Agosto", "19 de Agosto", "18-20 de Agosto", "22 de Agosto", "23 de Agosto"],
         series: [serie]
     };
 
@@ -247,7 +247,7 @@ const lab = ["'a'", "'b'", "'c'"]
 i++
 //console.log(contB)
 var data = {
-    labels: [label],
+    labels: ["Tenda 2 Pessoas", "Colchão Solteiro", "Colchão de Casal", "Tenda 3 Pessoas"],
     series: [serie]
 };
 

@@ -93,17 +93,10 @@ async function button() {
     console.log(estado)
     console.log(prazo)
     if (estado == "S") {
-        if (prazo == "S") {
             caucaoFinal = 0.00
-        } else {
-            caucaoFinal = 0.00
-        }
     } else if (estado == "N") {
-        if (prazo == "S") {
             caucaoFinal = precoDevolucao
-        } else {
-            caucaoFinal = precoDevolucao * 0.8
-        }
+        
     } else {
         swal({ type: 'error', title: 'Caução não calculada', text: 'Preenche todos os campos' })
     }

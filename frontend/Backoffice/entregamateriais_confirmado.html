@@ -38,7 +38,7 @@
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
 
     <style>
-                .modal {
+        .modal {
             display: none;
             /* Hidden by default */
             position: fixed;
@@ -131,22 +131,26 @@
             font-size: 14px;
 
         }
-        .button3 {border-radius: 8px;}
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
+        .button3 {
+            border-radius: 8px;
+        }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
     </style>
 
 
@@ -191,7 +195,7 @@
             <div class="top-left">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="materiais.html"><img src="images/logo.png" alt="Logo"></a>
-                    
+
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
@@ -249,34 +253,38 @@
                                         <div class="row">
                                             <div class="column">
                                                 <div style="margin-left: 180px; margin-top: 20px;">
-                                                <a class="button3" id="myBtn" ><img  width="150" height="150" src="images/qrcode.png" /></a>
-                                                
-                                                <div id="myModal" class="modal">
-                                                    <div  class="modal-content" >
-                                                        <span class="close">&times;</span>
-                                                        <h3  style="text-align: center;">Scan QR Code</h3>
-                                                        <br>
-                                                        <video style="margin: 0 auto;" width="90%" height="90%" id="camera"></video><br>
-                                                        <text id="code">
+                                                    <a class="button3" id="myBtn"><img width="150" height="150"
+                                                            src="images/qrcode.png" /></a>
+
+                                                    <div id="myModal" class="modal">
+                                                        <div class="modal-content">
+                                                            <span class="close">&times;</span>
+                                                            <h3 style="text-align: center;">Scan QR Code</h3>
+                                                            <br>
+                                                            <video style="margin: 0 auto;" width="90%" height="90%"
+                                                                id="camera"></video><br>
+                                                            <text id="code">
+                                                        </div>
                                                     </div>
-                                                </div>
                                                 </div>
                                             </div>
                                             <div class="column">
                                                 <div>
-                                                <form id="aluguer">
-                                                <div class="form-group"><label class="px-2">ID de aluguer </label>
-                                                    <input id="id_aluguer" class="form-control" style="width: 300px;">
+                                                    <form id="aluguer">
+                                                        <div class="form-group"><label class="px-2">ID de aluguer
+                                                            </label>
+                                                            <input id="id_aluguer" class="form-control"
+                                                                style="width: 300px;">
+                                                        </div>
+                                                        <br>
+                                                        <div class="input-group-btn">
+                                                            <button type="submit" class="btn btn-primary"
+                                                                id="btn_confirmar">Confirmar aluguer</button>
+                                                        </div>
+                                                    </form>
                                                 </div>
-                                                <br>
-                                                <div class="input-group-btn">
-                                                    <button type="submit" class="btn btn-primary"
-                                                        id="btn_confirmar">Confirmar aluguer</button>
-                                                </div>
-                                            </form>
                                             </div>
-                                            </div>
-                                          </div>
+                                        </div>
                                         <!--<div class="card-body">
                                             <button id="myBtn" class="btn btn-primary">Scan</button>
                                            
@@ -408,36 +416,36 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js"></script>
         <script>// Get the modal
             var modal = document.getElementById("myModal");
-            
+
             // Get the button that opens the modal
             var btn = document.getElementById("myBtn");
-            
+
             // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
-            
+
             // When the user clicks on the button, open the modal
-            btn.onclick = function() {
-              modal.style.display = "block";
-              scan()
+            btn.onclick = function () {
+                modal.style.display = "block";
+                scan()
             }
-            
+
             // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-              modal.style.display = "none";
-            }
-            
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-              if (event.target == modal) {
+            span.onclick = function () {
                 modal.style.display = "none";
-              }
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
             }</script>
         <script>
             function scan() {
                 let scanner = new Instascan.Scanner({
                     video: document.getElementById("camera")
                 });
-                
+
 
                 let resultado = document.getElementById("code");
                 scanner.addListener("scan", function (content) {
@@ -451,25 +459,87 @@
                     console.log(email)
                     console.log(proId)
                     modal.style.display = "none";
+                    var response = true
                     user = {
                         product_stock_id: pro,
                         notes: email
                     }
                     console.log(user)
                     try {
-                        response1 = fetch(`https://backend-easyfestival.herokuapp.com/confirm`, {
-                            headers: {
-                                "Accept": "application/json",
-                                "Content-Type": "application/json"
-                            },
-                            method: "PUT",
-                            body: JSON.stringify(user)
+                        return fetch(`https://easyfestival.herokuapp.com/stockMovs`,
+                            {
+                                method: "GET",
+                                headers: {
+                                    'Accept': 'application/json',
+                                    'Content-Type': 'application/json',
+                                }
+                            }).then((response) => response.json())
+                            .then((responseData) => {
+                                console.log(responseData);
+                                let i = 1
+                                for (mov of responseData) {
+                                    if (pro == mov.product_stock_id) {
+                                        swal({
+                                            title: 'Dados da Entrega',
+                                            html:
+                                                '<p style="color: black; "> Nome </p>' +
+                                                '<input id="nome" ><br>' +
+                                                '<br><p style="color: black; "> Quantidade </p>' +
+                                                '<input id="qty"><br>',
+                                            confirmButtonText: 'Entregar',
+                                            cancelButtonText: 'Cancelar',
+                                            confirmButtonColor: '#086a87',
+                                            cancelButtonColor: '#7e7e7e',
+                                            showCancelButton: true,
+                                            showConfirmButton: true,
+                                            //confirmButtonText: 'Sim'
+                                        })
+                                        document.getElementById("nome").value = mov.product.name
+                                        document.getElementById("qty").value = Math.abs(mov.qty)
+                                    }
+                                    i++
+                                }
+                            }).then(result => {
+                                console.log(response)
+                                if(response){
+                                    console.log("olaaaa")
+                                return fetch(`https://backend-easyfestival.herokuapp.com/confirm`, 
+                                {
+                                    headers: {
+                                        "Accept": "application/json",
+                                        "Content-Type": "application/json"
+                                    },
+                                    method: "PUT",
+                                    body: JSON.stringify(user)
 
-                        })
-                        swal({ type: 'success', title: 'Entrega efetuada', text: 'Produto entregue com sucesso' })
-                        console.log(content)
+                                })
+                            
+                        
+                        console.log("entregou")
+                            }
+                            })
+                            swal({ type: 'success', title: 'Entrega efetuada', text: 'Produto entregue com sucesso' })
+                            
+
                     } catch (err) {
                         //console.log("catch")
+                        swal({ type: 'error', title: 'Falha na entrega', text: err })
+                    }
+                    try{
+                        return fetch(`https://backend-easyfestival.herokuapp.com/confirm`, 
+                                {
+                                    headers: {
+                                        "Accept": "application/json",
+                                        "Content-Type": "application/json"
+                                    },
+                                    method: "PUT",
+                                    body: JSON.stringify(user)
+
+                                })
+                            
+                        swal({ type: 'success', title: 'Entrega efetuada', text: 'Produto entregue com sucesso' })
+                        console.log(content)
+                    } catch(err) {
                         swal({ type: 'error', title: 'Falha na entrega', text: err })
                     }
 
