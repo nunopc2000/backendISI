@@ -4,7 +4,7 @@ const req = require('request');
 //GET
 function login(callback) {
   let options = {
-      url: `https://api.moloni.pt/v1/grant/?grant_type=password&client_id=trabalhoisi&client_secret=d96702e79bdae466f779aadc227e9e18587d7a2d&username=nunoabreufernandes.21@gmail.com&password=EasyFestival123`
+      url: `https://api.moloni.pt/v1/grant/?grant_type=password&client_id=trabalhoisi&client_secret=d96702e79bdae466f779aadc227e9e18587d7a2d`
   }
   req.get(options, (err, res) => {
       if (!err && res.statusCode == 200) {
